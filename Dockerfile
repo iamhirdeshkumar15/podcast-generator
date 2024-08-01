@@ -10,11 +10,9 @@ RUN apt-get update && apt-get install -y \
     libffi-dev \
     python3-dev
 
-# Upgrade pip to the latest version
-RUN pip3 install --upgrade pip
+# Install PyYAML using pip without upgrading pip
+RUN python3 -m pip install pyYAML
 
-# Install PyYAML using pip
-RUN pip3 install PyYAML
 
 # Copy the feed.py script to /usr/bin and make it executable
 COPY feed.py /usr/bin/feed.py
