@@ -1,5 +1,7 @@
 #!/bin/bash
 
+docker build -t podcast .
+
 echo "==================="
 
 git config --global user.name "${GITHUB_ACTOR}"
