@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     python3-dev
 
 # Install PyYAML using pip without upgrading pip
-RUN python3 -m pip install pyYAML
+RUN python3.12 -m pip install pyYAML
 
 
 # Copy the feed.py script to /usr/bin and make it executable
